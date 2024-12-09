@@ -1,11 +1,14 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CadastrarAluno from './components/CadastrarAluno';
+import CadastrarImc from './components/CadastrarImc';
 
-function App() {
-  return (
-    <div id="app">
-      <h1>App</h1>
-    </div>
-  );
-}
-
+const App: React.FC = () => {
+    return (
+        <Router>
+            <Switch>
+                <Route path="/aluno/cadastrar" component={CadastrarAluno} />
+                <Route path="/imc/cadastrar" component={CadastrarImc} />
+            </Switch>
+        </Router>);};
 export default App;

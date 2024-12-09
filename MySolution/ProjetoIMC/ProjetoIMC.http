@@ -3,4 +3,35 @@
 GET {{ProjetoIMC_HostAddress}}/weatherforecast/
 Accept: application/json
 
-###
+### CADASTRAR ALUNO
+POST http://localhost:5198/api/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Zezé",
+    "sobrenome": "De Camargo"
+}
+
+### CADASTRAR IMC
+POST http://localhost:5198/api/imc/cadastrar
+Content-Type: application/json
+
+{
+    "alunoId": 1, 
+    "altura": 1.75,
+    "peso": 70
+}
+
+### LISTAR ALUNO
+GET http://localhost:5198/api/imc/listarporaluno/1
+Content-Type: application/json
+
+### ALTERAR ALUNO
+PUT http://localhost:5198/api/imc/alterar/1
+Content-Type: application/json
+
+{
+    "alunoId": 1, 
+    "altura": 1.75,
+    "peso": 80
+}
